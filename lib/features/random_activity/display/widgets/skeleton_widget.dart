@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:the_boring_app/features/random_activity/display/pages/legalese_page.dart';
 import 'package:the_boring_app/features/random_activity/display/pages/random_activity_page.dart';
-// import '../provider/random_activity_provider.dart';
+import '../provider/random_activity_provider.dart';
 import '../pages/legalese_page.dart';
 import '../pages/random_activity_page.dart';
 import '../provider/selected_page_provider.dart';
@@ -32,9 +32,7 @@ class SkeletonWidget extends StatelessWidget {
             onPressed: () async {              
               Provider.of<SelectedPageProvider>(context, listen: false).changePage(0);
 
-              //Provider.of<RandomActivityProvider>(context, listen: false)
-
-              //     .eitherFailureOrActivity();
+              Provider.of<RandomActivityProvider>(context, listen: false).eitherFailureOrActivity();
             },
             icon: const Icon(
               Icons.flash_on_outlined,

@@ -6,32 +6,17 @@ import '../../../../core/errors/failures.dart';
 
 import '../../domain/entities/random_activity.dart';
 
-//Todo: Add the provider RandomActivityProvider
-
-//import '../provider/random_activity_provider.dart';
+import '../provider/random_activity_provider.dart';
 
 class RandomActivityWidget extends StatelessWidget {
   const RandomActivityWidget({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    //Todo: Add the provider RandomActivityProvider
 
-    RandomActivity? randomActivity = const RandomActivity(
-        activity: 'Surf',
-        type: 'Cool',
-        participants: 1,
-        price: 1,
-        link: '',
-        accesibility: 1);
+    RandomActivity? randomActivity = Provider.of<RandomActivityProvider>(context).randomActivity;
 
-    // = Provider.of<RandomActivityProvider>(context).randomActivity;
-
-    //Todo: Add the provider RandomActivityProvider
-
-    Failure? failure = CacheFailure(errorMessage: 'Todo');
-
-    // = Provider.of<RandomActivityProvider>(context).failure;
+    Failure? failure = Provider.of<RandomActivityProvider>(context).failure;
 
     if (randomActivity != null) {
       return Expanded(
