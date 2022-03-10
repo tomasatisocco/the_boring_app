@@ -6,7 +6,7 @@ class SelectedPageProvider extends ChangeNotifier {
   });
   int selectedPage;
 
-  void changePage(newValue) {
+  void changePage(int newValue) {
     selectedPage = newValue;
     notifyListeners();
   }

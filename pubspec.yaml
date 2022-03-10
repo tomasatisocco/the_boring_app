@@ -31,4 +31,4 @@ flutter:
   uses-material-design: true
 
   assets:
-    - images/
+    - images/water_bg.jpg
