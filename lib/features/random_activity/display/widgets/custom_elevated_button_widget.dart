@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+ValueKey customButtonKey = const ValueKey('custom_button_key');
+
 class CustomElevatedButtonWidget extends StatelessWidget {
   const CustomElevatedButtonWidget({
     Key? key,
@@ -22,6 +24,7 @@ class CustomElevatedButtonWidget extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(20.0),
       child: ElevatedButton.icon(
+        key: customButtonKey,
         style: ElevatedButton.styleFrom(
             primary: buttonColor,
             shape: RoundedRectangleBorder(
